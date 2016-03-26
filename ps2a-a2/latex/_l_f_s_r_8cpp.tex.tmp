@@ -1,0 +1,63 @@
+\hypertarget{_l_f_s_r_8cpp}{}\section{L\+F\+S\+R.\+cpp File Reference}
+\label{_l_f_s_r_8cpp}\index{L\+F\+S\+R.\+cpp@{L\+F\+S\+R.\+cpp}}
+
+
+implemetation the \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}L\+F\+S\+R.\+hpp\char`\"{}}\\*
+Include dependency graph for L\+F\+S\+R.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{_l_f_s_r_8cpp_ae5b2c264b685fb6f6ae8ce2a828058fb}{operator$<$$<$} (ostream \&out, \hyperlink{class_l_f_s_r}{L\+F\+S\+R} \&lfsr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implemetation the \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class 
+
+Define the \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class.
+
+2016
+
+\begin{DoxyAuthor}{Author}
+Duy Truong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/15/2016 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0
+\end{DoxyVersion}
+\hypertarget{_l_f_s_r_8cpp_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}\label{_l_f_s_r_8cpp_DESCRIPTION}
+This file implimentation for the function in the \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class which are contructor, step, generate, overloaded extractrion operator function.
+
+2016
+
+\begin{DoxyAuthor}{Author}
+Duy Truong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/15/2016 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0
+\end{DoxyVersion}
+\hypertarget{_l_f_s_r_8cpp_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}\label{_l_f_s_r_8cpp_DESCRIPTION}
+Declearation the \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class and include the library for the function. The seed and seed are strings, length and tap is int value. 
+
+\subsection{Function Documentation}
+\hypertarget{_l_f_s_r_8cpp_ae5b2c264b685fb6f6ae8ce2a828058fb}{}\index{L\+F\+S\+R.\+cpp@{L\+F\+S\+R.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!L\+F\+S\+R.\+cpp@{L\+F\+S\+R.\+cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf L\+F\+S\+R} \&}]{lfsr}
+\end{DoxyParamCaption}
+)}\label{_l_f_s_r_8cpp_ae5b2c264b685fb6f6ae8ce2a828058fb}
+overload the operator cout, to print the output 

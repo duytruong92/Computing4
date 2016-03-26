@@ -1,0 +1,13 @@
+CC = g++
+cflgz = -c -Wall -ansi -pedantic
+boost = -lboost_unit_test_framework
+cppz = ring_buffer_class.cpp ring_buffer_test.cpp
+oz = $(cppz: .cpp =.o)
+exe = ps3b
+all: FUQ
+
+FUQ: $(oz)
+	$(CC) $(boost) $(oz) -o $(exe)
+
+clean:
+	rm *.o *~ 

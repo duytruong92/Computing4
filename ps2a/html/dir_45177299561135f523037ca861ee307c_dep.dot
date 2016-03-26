@@ -1,0 +1,6 @@
+digraph "/home/duytruong/comp4/ps2a" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_45177299561135f523037ca861ee307c [shape=box, label="ps2a", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_45177299561135f523037ca861ee307c.html"];
+}

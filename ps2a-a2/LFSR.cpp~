@@ -1,0 +1,65 @@
+/**
+*	@copytight 	2016 Duy Truong
+*	@file 		LFSR.cpp
+*	@author		Duy Truong
+*	@date		02/15/2016
+*	@version 	1.0.0
+*	
+*
+*	@brief	implemetation the LFSR class
+*
+*	@section DESCRIPTION
+*
+*	This file implimentation for the function in the LFSR class which are contructor, step, generate, overloaded extractrion operator function.
+* 
+*/
+#include <iostream>
+#include <cmath>
+#include <string>
+#include "LFSR.hpp"
+
+/**
+*	Contructor for the class, take the value and input to the private variable.
+*
+*/
+LFSR::LFSR(string seed, int t) {
+  data = seed;
+  length =  data.size();
+  tap = t;
+}
+
+/**
+*	get the return value, ensurees either 0 or 1. 
+*
+*/
+int LFSR::step() {
+  int bit;
+  int length = data.size();
+  string s_bit;
+  bit = data.front() ^ data[length - tap - 1];
+  s_bit = to_string(bit);
+  data.erase(0, 1);
+  data = data + s_bit;
+  return bit;
+}
+
+/**
+*	get the return value, ensurees either 0 or 1. 
+*
+*/
+int LFSR::generate(int k) {
+  int count = 0;
+  for (int i = k - 1; i >= 0; i--) {
+    if (step() == 1)
+      count +=  pow(2, i);
+  }
+  return count;
+}
+
+/**
+*	overload the operator cout, to print the output
+*/
+ostream& operator << (ostream& out, LFSR& lfsr) {
+  out << lfsr.data;
+  return out;
+}

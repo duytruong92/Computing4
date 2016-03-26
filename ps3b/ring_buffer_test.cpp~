@@ -1,0 +1,55 @@
+/**
+*	@copyright 	2016
+*	@file 		ring_buffer_test.cpp
+*	@author		Duy Truong
+*	@date		3/3/2016
+*	@version 	1.0.0
+*	
+*
+*	@brief	test ringbuffer class
+*
+*	@section DESCRIPTION
+*
+*	Test the ringbuffer_iterator function
+* 
+*/
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MODULE Main
+
+
+
+#include <stdint.h>
+#include <iostream>
+#include <string>
+#include <exception>
+#include <stdexcept>
+#include "ring_buffer_class.hpp"
+
+typedef RingNameSpace::RingBuffer<int, 10> RB10;
+typedef RingNameSpace::RingBuffer<int, 4> RB4;
+typedef RingNameSpace::RingBuffer<int, 3> RB3;
+typedef RingNameSpace::RingBuffer<int, 2> RB2;
+typedef RingNameSpace::RingBuffer<int, 1> RB1;
+typedef RingNameSpace::RingBuffer<int, 0> RB0;
+
+int main(int argc, char* argv[]) {
+    RingNameSpace::Ring_Buffer<int, 100> test;
+    for (int i = 10; i >=0; i--)
+    test.push_back(i);
+    std::cout << "size of ring: "<< test.size()<< std::endl;
+
+    RingNameSpace::ringbuffer_iterator<int, 100> it;
+
+    for (it = test.begin(); it != test.end(); ++it) {
+    std::cout <<  *it << " " << *test.end() <<"\n";
+    }
+
+    test.pop_front();
+    test.pop_front();
+    test.push_back(100);
+
+    for (it = test.begin(); it != test.end(); ++it) {
+    std::cout <<  *it << " " << *test.end() <<"\n";
+    }
+    return 0;
+}

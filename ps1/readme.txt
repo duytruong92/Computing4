@@ -1,0 +1,13 @@
+Name Duy Truong
+
+I used the drawable libary to draw the recursive image. I have two code. 
+One is original code and another one is sierpinski. In the Original. 
+each big square i will draw 5 small square around and in the sierpinski. 
+each big triangle i draw 3 small triangle.
+
+we use vitural draw function to replace for the normal draw window function. 
+it make use draw any shape or more than one 1 shape 1 time.
+
+In my opinion we can save more memory because we dont need define more object we onlt need one.
+
+I took me 2 days to finish.

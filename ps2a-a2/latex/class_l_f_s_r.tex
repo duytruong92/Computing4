@@ -1,0 +1,120 @@
+\hypertarget{class_l_f_s_r}{}\section{L\+F\+S\+R Class Reference}
+\label{class_l_f_s_r}\index{L\+F\+S\+R@{L\+F\+S\+R}}
+
+
+Class is an randomsizes of seed using xoe on seed.  
+
+
+
+
+{\ttfamily \#include $<$lfsr\+\_\+class.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_f_s_r_ab916cfa74198ed4e9e2a177e3530614a}{L\+F\+S\+R} (string seed, int t)
+\begin{DoxyCompactList}\small\item\em Contructor for \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class, get the binary number. \end{DoxyCompactList}\item 
+int \hyperlink{class_l_f_s_r_a4b4a688ac56dd7a2293d23e2ba2ba693}{step} ()
+\begin{DoxyCompactList}\small\item\em step function, get the return value, ensurees either 0 or 1. \end{DoxyCompactList}\item 
+int \hyperlink{class_l_f_s_r_a9e0d7ecd1c3f971ba953397cac4fd167}{generate} (int k)
+\begin{DoxyCompactList}\small\item\em gerate function, runs step on sedd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_l_f_s_r_ae5b2c264b685fb6f6ae8ce2a828058fb}{operator$<$$<$} (ostream \&out, \hyperlink{class_l_f_s_r}{L\+F\+S\+R} \&lfsr)
+\begin{DoxyCompactList}\small\item\em overloaded extraction operator, print the new string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class is an randomsizes of seed using xoe on seed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_l_f_s_r_ab916cfa74198ed4e9e2a177e3530614a}{}\index{L\+F\+S\+R@{L\+F\+S\+R}!L\+F\+S\+R@{L\+F\+S\+R}}
+\index{L\+F\+S\+R@{L\+F\+S\+R}!L\+F\+S\+R@{L\+F\+S\+R}}
+\subsubsection[{L\+F\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}L\+F\+S\+R\+::\+L\+F\+S\+R (
+\begin{DoxyParamCaption}
+\item[{string}]{seed, }
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\label{class_l_f_s_r_ab916cfa74198ed4e9e2a177e3530614a}
+
+
+Contructor for \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class, get the binary number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & is the string to use \\
+\hline
+{\em tap} & is an index or times you want to tap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N/a
+\end{DoxyReturn}
+Contructor for the class, take the value and input to the private variable. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_l_f_s_r_a9e0d7ecd1c3f971ba953397cac4fd167}{}\index{L\+F\+S\+R@{L\+F\+S\+R}!generate@{generate}}
+\index{generate@{generate}!L\+F\+S\+R@{L\+F\+S\+R}}
+\subsubsection[{generate}]{\setlength{\rightskip}{0pt plus 5cm}int L\+F\+S\+R\+::generate (
+\begin{DoxyParamCaption}
+\item[{int}]{k}
+\end{DoxyParamCaption}
+)}\label{class_l_f_s_r_a9e0d7ecd1c3f971ba953397cac4fd167}
+
+
+gerate function, runs step on sedd. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & the resterter k times \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+get the return value, ensurees either 0 or 1. \hypertarget{class_l_f_s_r_a4b4a688ac56dd7a2293d23e2ba2ba693}{}\index{L\+F\+S\+R@{L\+F\+S\+R}!step@{step}}
+\index{step@{step}!L\+F\+S\+R@{L\+F\+S\+R}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}int L\+F\+S\+R\+::step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_l_f_s_r_a4b4a688ac56dd7a2293d23e2ba2ba693}
+
+
+step function, get the return value, ensurees either 0 or 1. 
+
+\begin{DoxyReturn}{Returns}
+int
+\end{DoxyReturn}
+get the return value, ensurees either 0 or 1. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_l_f_s_r_ae5b2c264b685fb6f6ae8ce2a828058fb}{}\index{L\+F\+S\+R@{L\+F\+S\+R}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!L\+F\+S\+R@{L\+F\+S\+R}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf L\+F\+S\+R} \&}]{lfsr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_l_f_s_r_ae5b2c264b685fb6f6ae8ce2a828058fb}
+
+
+overloaded extraction operator, print the new string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & is an ostream to print \\
+\hline
+{\em \hyperlink{class_l_f_s_r}{L\+F\+S\+R}} & is an object of \hyperlink{class_l_f_s_r}{L\+F\+S\+R} class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream
+\end{DoxyReturn}
+overload the operator cout, to print the output 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lfsr\+\_\+class.\+hpp\item 
+lfsr\+\_\+class.\+cpp\end{DoxyCompactItemize}

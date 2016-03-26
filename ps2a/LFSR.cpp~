@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include "LFSR.hpp"
+
+
+LFSR::LFSR(string seed, int t) 
+{
+  data = seed;
+  length =  data.size();
+  tap = t;
+}
+
+int LFSR::step() 
+{
+  int bit;
+  int length = data.size();
+  string s_bit;
+  bit = data.front() ^ data[length - tap - 1];
+  s_bit = to_string(bit);
+  data.erase(0, 1);
+  data = data + s_bit;
+  return bit;
+}
+
+int LFSR::generate(int k) {
+  int count = 0;
+  for (int i = k - 1; i >= 0; i--) {
+    if (step() == 1)
+      count +=  pow(2, i);
+  }
+  return count;
+}
+
+ostream& operator << (ostream& out, LFSR& lfsr) {
+  out << lfsr.data;
+  return out;
+}

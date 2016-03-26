@@ -1,0 +1,110 @@
+/**
+*	@copyright 	2016
+*	@file 		ring_buffer_class.hpp
+*	@author		Duy Truong
+*	@date		3/3/2016
+*	@version 	1.0.0
+*	
+*
+*	@brief	Define the ringbuffer class
+*
+*	@section DESCRIPTION
+*
+*	Declearation the ringbuffer class and include the library for the function. define the private value is size, capacity, size, begin.
+* 
+*/
+#ifndef RING_BUFFER_HPP
+#define  RING_BUFFER_HPP
+#include <boost/utility.hpp>
+#include <string>
+
+namespace RingNameSpace  {
+template <typename T, int capacity> class Ring_Buffer: boost::noncopyable{
+ public:
+/**
+*      @brief Default Constructor
+*      @param N/A
+*      @return N/A
+*/
+    Ring_Buffer();
+
+/**
+*     @brief Default Deconstructor
+*     @param N/A
+*     @return N/A
+*/
+    ~Ring_Buffer();
+
+/**
+*     @brief Returns the size of the RingBuffer
+*     @param N/A
+*     @return int
+*/
+    int getSize();
+
+/**
+*     @brief Adds T item to the end of the RingBuffer
+*     @param T item
+*     @return N/A
+*/
+    void push_back(T item);
+
+/**
+*     @brief remove the front element
+*     @param N/A
+*     @return N/A
+*/
+    void pop_front(void);
+
+/**
+*     @brief Returns the first element
+*     @param N/A
+*     @return T
+*/
+    T front();
+
+/**
+*     @brief  Returns the last element
+*     @param N/A
+*     @return N/A
+*/
+    T end();
+
+/**
+*      @brief Not implimented for the iterator 
+*      @param N/A
+*      @return T
+*/
+    T for_each();
+
+/**
+*     @brief return the element same with item
+*     @param N/A
+*     @return T
+*/
+    T * find(T item);
+
+ private:
+    int size;       ///< size of ringbuffer
+    T * buffer;     ///< array type T
+    int capacity_;  ///< number of element in ringbuffer
+    int begin;      ///< first index
+
+/**
+*     @brief NonCopyable Constructor
+*     @param N/A
+*     @return N/A
+*/
+    Ring_Buffer(const Ring_Buffer &Non_Copyable_Constructor);
+
+/**
+*     @brief Not Implemented = Operator for a non copyable constructor
+*     @param N/A
+*     @return N/A
+*/
+    Ring_Buffer& operator = (const Ring_Buffer &Non_Copyable_Constructor);
+};
+  #include "ring_buffer_class.cpp"
+}  // namespace RingNameSpace
+
+#endif
